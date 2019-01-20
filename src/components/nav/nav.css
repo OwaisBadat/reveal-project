@@ -1,6 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:700");
 @import url("https://fonts.googleapis.com/css?family=Orbitron:700");
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
+
+
+#explore {
+    padding-top:0px;
+    padding-bottom:60px;
+}
+#explore2 {
+    padding-top:0px;
+    padding-bottom:50px;
+}
 a {
   text-decoration: none;
 }
@@ -283,7 +293,7 @@ body {
   bottom: 10px;
 }
 .about-us-section {
-  padding: 250px 0 80px;
+  padding: 50px 0 80px;
 }
 .about-us-section> p {
   display: block;
@@ -366,12 +376,11 @@ body {
   color: #fff;
 }
 .portfolio-top {
-  background: url("https://unsplash.it/3000/1987?image=931") no-repeat center;
   background-size: 100% 100%;
   color: #000;
 }
 .portfolio-top .half-big-text {
-  margin: 90px auto;
+  margin: 50px auto;
 }
 .portfolio-second {
   padding: 50px 0;
@@ -379,43 +388,32 @@ body {
 }
 .portfolio-collage {
   height: 1000px;
-  max-width: 1300px;
+  max-width: 1800px;
   margin: auto;
 }
 .collage-column {
   height: 100%;
-  width: 33.3333333%;
+  width: 50%;
 }
 .collage-image {
   background-size: cover !important;
   width: 100%;
 }
 .collage-image.third {
-  height: 33.3333333%;
+  height: 50%;
 }
 .collage-image.two-thirds {
-  height: 66.6666666%;
+  height: 100%;
+  width:100%;
 }
 .collage-image.one {
-  background: url("http://images.huffingtonpost.com/2014-12-02-knowledgepoolstokeepyourbrainhealthythiswinter.jpeg") no-repeat center;
+  background: url('./vr1.png') no-repeat center;
 }
 .collage-image.two {
-  background: url("http://davideschenlohr.com/wp/david/wp-content/uploads/2015/08/type-set.jpg") no-repeat center;
-}
-.collage-image.three {
-  background: url("http://papers.co/wallpaper/papers.co-mu80-paris-eiffel-tower-tour-dark-bw-bird-france-29-wallpaper.jpg") no-repeat center;
-}
-.collage-image.four {
-  background: url("http://www.secondchance.org/wp-content/uploads/2014/07/unsplash_52c8b9c40b624_1-copy.jpg") no-repeat left top;
-}
-.collage-image.five {
-  background: url("https://ununsplash.imgix.net/31/4dAw8Su1SyaQH5ABC87S_Traunsee-Toscana_2014-02-01%20%2890%20von%20117%29.jpg?fit=max&fm=jpg&h=1080&q=75&w=1080") no-repeat center;
+  background: url('./vr2.png') no-repeat center;
 }
 .collage-image.six {
-  background: url("https://d24wuq6o951i2g.cloudfront.net/img/events/id/146/146452/assets/f18.cirque.jpg") no-repeat center;
-}
-.collage-image.seven {
-  background: url("http://static1.squarespace.com/static/5555d35ae4b02de6a6e49ea4/5559d7efe4b0338055e763ac/5559d863e4b0c2b7c9e90a86/1433334869903/14010_023.jpg") no-repeat center;
+  background: url('./vue-sketch.jpg') no-repeat center
 }
 .portfolio-bottom {
   height: 300px;
@@ -430,7 +428,7 @@ body {
   margin-bottom: 15px;
 }
 .team-section {
-  padding: 250px 0 0px;
+  padding: 150px 0 0px;
 }
 .team-section p {
   position: relative;

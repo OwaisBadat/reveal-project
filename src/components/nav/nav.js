@@ -2,14 +2,13 @@ import React, {Component} from "react"
 import navcss from './nav.css'
 import Reveal from './reveal.jpg'
 import $ from 'jquery'
+import smartglass from "./smartglasses.png"
 
 
 class Nav extends React.Component {
 
     componentDidMount() {
 
-        // Pinspiration
-// https://www.pinterest.com/pin/271201208788842829/
 
 $(document).ready(function(){
     
@@ -40,12 +39,6 @@ $(document).ready(function(){
         if ($(window).scrollTop() >= $('#contactSection').offset().top - $(window).height()/2 ) {
             $('.nav-link').removeClass('active');
             $('#contactLink').addClass('active');
-        } else if ($(window).scrollTop() >= $('#priceSection').offset().top - $(window).height()/2 ) {
-            $('.nav-link').removeClass('active');
-            $('#priceLink').addClass('active');
-        } else if ($(window).scrollTop() >= $('#servicesSection').offset().top - $(window).height()/2 ) {
-            $('.nav-link').removeClass('active');
-            $('#servicesLink').addClass('active');
         } else if ($(window).scrollTop() >= $('#teamSection').offset().top - $(window).height()/2 ) {
             $('.nav-link').removeClass('active');
             $('#teamLink').addClass('active');
@@ -61,17 +54,18 @@ $(document).ready(function(){
         }
     });
     
-});
+    });
       }
     
     render() {
         return (
             <div>
             <div className="nav-bar">
-              <div className="nav-logo">PHOENIX</div>
+              <div className="nav-logo">Reveal the Vue</div>
               <div className="nav-links-container">
                 <a className="nav-link active" href="#topSection" id="topLink">Home</a>
-                <a className="nav-link" href="#aboutSection" id="aboutLink">About Us</a>
+                <a className="nav-link" href="#aboutSection" id="aboutLink">Srugical Glasses</a>
+                <a className="nav-link" href="#portfolioSection" id="portfolioLink">VR Headset</a>
                 <a className="nav-link" href="#teamSection" id="teamLink">Team</a>
                 <a className="nav-link" href="#contactSection" id="contactLink">Contact</a>
               </div>
@@ -84,23 +78,21 @@ $(document).ready(function(){
               </div>
             </div>
             <div className="rela-block under-top-section">
-              <div className="half-big-text under-top-big-text">Phoenix</div>
+              <div className="half-big-text under-top-big-text">Reveal the Vue</div>
               <div className="lines-thing" />
-              <p className="under-top-small-text">Kitsch pinterest tacos bicycle rights, yuccie leggings tote bag readymade fixie gentrify freegan small batch put a bird on it. Street art pop-up gochujang, tumblr migas pour-over kombucha skateboard lo-fi umami hammock whatever. Tattooed distillery
-                bushwick, mustache sustainable keytar tilde chillwave lumbersexual literally cliche lomo tousled.</p>
-            </div>
-            <div className="rela-block welcome-section">
-              <div className="abs-cent-text welcome-text">
-                <h1 className="big-text">Welcome</h1>
-                <div className="orbitron black-orb">\\\///</div>
-                <p>Direct trade 90's quinoa literally helvetica aesthetic, listicle ugh lo-fi blue bottle deep v vinyl asymmetrical gochujang marfa.</p>
-                <div className="has-lines black">Explore</div>
-              </div>
+              <p className="under-top-small-text">The patent-pending VUE is a high-tech, 3D vision aid for people suffering from debilitating vision loss caused by retinal diseases such as age-related macular degeneration (AMD), diabetic retinopathy, and retinitis pigmentosa, as well as other vision disorders such as hemianopia, and glaucoma.  These diseases affect over 17 million people in the United States, and over ten times that amount worldwide. The VUE has the capability to give these people back some of their independence and improve their quality of life.  In addition, we are pursuing Medicare coverage to minimize the out-of-pocket costs for patients to purchase the VUE, but we have not been approved for this yet. </p>
             </div>
             <div className="rela-block about-us-section" id="aboutSection">
-              <h1 className="half-big-text has-border">About Us</h1>
-              <p>Fixie keffiyeh chambray tattooed biodiesel locavore yuccie street art. Pour-over biodiesel cronut forage fap, occupy mixtape offal chillwave.</p>
-              <div className="orbitron black-orb">\\\///</div>
+                <div className="product-one">
+              <h1 className="half-big-text has-border">Surgical Glasses</h1>
+              <p></p>
+              <div id="explore">
+              <div className="has-lines black">Explore</div>
+              </div>
+              <div>
+                <img src={smartglass} />
+              </div>
+              </div>
               <div className="rela-block about-us-quad-container">
                 <div className="rela-block quad-row">
                   <div className="quad-half floated left">
@@ -122,206 +114,67 @@ $(document).ready(function(){
                     <p>Brooklyn schlitz tacos readymade, portland wolf man braid direct trade fingerstache next level lo-fi pickled.</p>
                   </div>
                 </div>
-              </div>
-              <div className="orbitron black-orb">\\\///</div>
-              <div className="rela-block about-us-bottom-container">
-                <div className="floated left bottom-left-side">
-                  <h2 className="small-header">Retina Ready</h2>
-                  <div className="lines-thing black" />
-                  <p>Brooklyn migas gentrify, helvetica beard listicle yuccie 8-bit cardigan taxidermy knausgaard try-hard. 90's letterpress occupy franzen bushwick try-hard, tofu disrupt wayfarers echo park deep v. Man braid mustache gluten-free put a bird on it flexitarian.</p>
-                </div>
-                <div className="floated left bottom-right-side">
-                  <p>Development</p>
-                  <div className="rela-block progress-bar one" />
-                  <p>Design</p>
-                  <div className="rela-block progress-bar two" />
-                  <p>Marketing</p>
-                  <div className="rela-block progress-bar three" />
-                  <p>Dedication</p>
-                  <div className="rela-block progress-bar" />
-                </div>
-              </div>    
+              </div>   
             </div>
             <div className="rela-block portfolio-section" id="portfolioSection">
               <div className="rela-block portfolio-top grad-back">
-                <h1 className="half-big-text has-border">Portfolio</h1>
+                <h1 className="half-big-text has-border">VR Headset</h1>
+                <div id="explore2">
+              <div className="has-lines black">Explore</div>
               </div>
-              <div className="rela-block portfolio-second">
-                <div className="has-lines white">Show All</div>
-                <div className="has-lines white">Design</div>
-                <div className="has-lines white">Graphics</div>
-                <div className="has-lines white">Motion</div>
-                <div className="has-lines white">Video</div>
               </div>
               <div className="rela-block portfolio-collage">
                 <div className="floated left collage-column">
                   <div className="floated left collage-image third one" />
                   <div className="floated left collage-image third two" />
-                  <div className="floated left collage-image third three" />
-                </div>
-                <div className="floated left collage-column">
-                  <div className="floated left collage-image third four" />
-                  <div className="floated left collage-image two-thirds five" />
+
                 </div>
                 <div className="floated left collage-column">
                   <div className="floated left collage-image two-thirds six" />
-                  <div className="floated left collage-image third seven" />
                 </div>
               </div>
               <div className="rela-block portfolio-bottom">
                 <div className="floated left quarter-div">
                   <div className="abs-cent-text">
-                    <h1 className="big-text">8679</h1>
-                    <p>Happy Clients</p>
+                    <h1 className="big-text">Vision Correction</h1>
+                    <p>one patient with 20/200 vision in one eye and worse than 20/400 with the other was able to read 20/80 using the VUE. (NOTE: 20/20 is considered normal vision, and that 20/200 is considered legally blind.)</p>
                   </div>
                 </div>
                 <div className="floated left quarter-div">
                   <div className="abs-cent-text">
-                    <h1 className="big-text">340 K+</h1>
-                    <p>Facebook Likes</p>
+                    <h1 className="big-text">Main Point 2</h1>
+                    <p>Main Point text</p>
                   </div>
                 </div>
                 <div className="floated left quarter-div">
                   <div className="abs-cent-text">
-                    <h1 className="big-text">100</h1>
-                    <p>Awards</p>
+                    <h1 className="big-text">Main Point 3</h1>
+                    <p>Main Point text</p>
                   </div>
                 </div>
                 <div className="floated left quarter-div">
                   <div className="abs-cent-text">
-                    <h1 className="big-text">3456</h1>
-                    <p>Retweets</p>
+                    <h1 className="big-text">Main Point 4</h1>
+                    <p>Main Point text</p>
                   </div>
                 </div>
               </div>
             </div>
             <div className="rela-block team-section" id="teamSection">
               <h1 className="half-big-text has-border">Team</h1>
-              <p>Wolf street art flannel microdosing, fixie viral small batch scenester PBR&amp;B brunch mlkshk asymmetrical. Everyday carry brooklyn green juice, typewriter squid pork belly lomo forage paleo. </p>
+              <p>Reveal was founded by Jerry Aguren and John Marino, with the guidance of Dr. Warren Cross  who was the catalyst inspiring Jerry to come up with the idea of the VUE.</p>
               <div className="orbitron black-orb">\\\///</div>
               <div className="rela-block profile-view-container">
-                <div className="arrow left" />
-                <div className="arrow right" />
-                <div className="profile-image" />
                 <div className="profile-content">
-                  <h2 className="half-big-text">Corn Dog</h2>
-                  <h3 className="small-header">Web Developer</h3>
-                  <p>Wolf street art flannel microdosing, fixie viral small batch scenester PBR&amp;B brunch mlkshk asymmetrical. Everyday carry brooklyn green juice, typewriter squid pork belly lomo forage paleo.</p>
+                  <h2 className="half-big-text">Jerry Aguren</h2>
+                  <h3 className="small-header">CEO</h3>
+                  <p> Jerry has more than thirty-years experience leading and developing new technologies across a broad range of industries. Prior to starting Reveal, Jerry served as Chief Technology Officer for Hewlett-Packard’s Storage Network Division and Chief Technologist of Optics for Hewlett-Packard’s Enterprise business divisions. Prior to Hewlett-Packard, Jerry was also one of the Founders of ATL, a tape library manufacturer that went IPO and was eventually sold for $300M..</p>
                   <div className="lines-thing black" />
                 </div>
               </div>
             </div>
-            <div className="rela-block clients-section">
-              <div className="floated left client-part">
-                <div className="abs-cent-text">
-                  <h2 className="half-big-text has-border">Clients</h2>
-                </div>
-              </div>
-              <div className="floated left client-part" />
-              <div className="floated left client-part" />
-              <div className="floated left client-part" />
-            </div>
-            <div className="rela-block services-section" id="servicesSection">
-              <div className="rela-block service-row">
-                <div className="floated left service-row-half grey-back">
-                  <div className="abs-cent-text">
-                    <h2 className="half-big-text has-border">Services</h2>
-                  </div>
-                </div>
-                <div className="floated right service-row-half">
-                  <div className="abs-cent-text">
-                    <h2 className="small-header">Quality over Quantity</h2>
-                    <div className="orbitron black-orb">\\\///</div>
-                    <p>Brooklyn migas gentrify, helvetica beard listicle yuccie 8-bit cardigan taxidermy knausgaard try-hard.</p>
-                  </div>
-                </div>
-              </div>
-              <div className="rela-block service-row">
-                <div className="floated right service-row-half black-back">
-                  <div className="abs-cent-text wordpress" />
-                </div>
-                <div className="floated left service-row-half">
-                  <div className="abs-cent-text">
-                    <h2 className="small-header">Wordpress</h2>
-                    <div className="orbitron black-orb">\\\///</div>
-                    <p>Brooklyn migas gentrify, helvetica beard listicle yuccie 8-bit cardigan taxidermy knausgaard try-hard. 90's letterpress occupy franzen bushwick.</p>
-                  </div>
-                </div>
-              </div>
-              <div className="rela-block service-row">
-                <div className="floated left service-row-half black-back">
-                  <div className="abs-cent-text weird-one">&lt;/&gt;</div>
-                </div>
-                <div className="floated right service-row-half">
-                  <div className="abs-cent-text">
-                    <h2 className="small-header">Pixel Perfect</h2>
-                    <div className="orbitron black-orb">\\\///</div>
-                    <p>3 wolf moon retro pickled, flexitarian echo park shoreditch keffiyeh direct trade sustainable forage readymade vinyl. Venmo bicycle rights mumblecore, fixie typewriter quinoa street art letterpress vinyl XOXO iPhone</p>
-                  </div>
-                </div>
-              </div>
-              <div className="rela-block service-row">
-                <div className="floated right service-row-half black-back">
-                  <div className="abs-cent-text star" />
-                </div>
-                <div className="floated left service-row-half">
-                  <div className="abs-cent-text">
-                    <h2 className="small-header">Minimal</h2>
-                    <div className="orbitron black-orb">\\\///</div>
-                    <p>Chia microdosing pork belly, occupy bitters pickled ennui cred listicle kale chips portland slow-carb. Leggings VHS readymade, authentic yuccie beard migas XOXO helvetica marfa gentrify. </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="rela-block our-plans-section" id="priceSection">
-              <h2 className="half-big-text has-border">Our Plans</h2>
-              <p>Flexitarian craft beer narwhal umami, swag church-key single-origin coffee. Gochujang hoodie cold-pressed, health goth paleo yr fashion axe listicle gentrify blog pinterest jean shorts.</p>
-              <div className="orbitron black-orb">\\\///</div>
-              <div className="rela-block plans-container">
-                <div className="plan">
-                  <h2 className="rela-block half-big-text">Basic</h2>
-                  <div className="orbitron black-orb">\\\///</div>
-                  <p className="rela-block"><span style={{fontFamily: '"Montserrat"', fontSize: '30px', lineHeight: '40px'}}>40$</span>/year</p>
-                  <div className="orbitron black-orb">\\\///</div>
-                  <ul className="rela-block">
-                    <li>Customer Support 24/7</li>
-                    <li>Lifetime Updates</li>
-                    <li>10GB Cloud Storage</li>
-                    <li>10 Email boxes</li>
-                    <li>-</li>
-                  </ul>
-                  <div className="has-lines black">Subscribe!</div>
-                </div>
-                <div className="plan">
-                  <h2 className="rela-block half-big-text">Standard</h2>
-                  <div className="orbitron black-orb">\\\///</div>
-                  <p className="rela-block"><span style={{fontFamily: '"Montserrat"', fontSize: '30px', lineHeight: '40px'}}>60$</span>/year</p>
-                  <div className="orbitron black-orb">\\\///</div>
-                  <ul className="rela-block">
-                    <li>Customer Support 24/7</li>
-                    <li>Lifetime Updates</li>
-                    <li>100GB Cloud Storage</li>
-                    <li>20 Email boxes</li>
-                    <li>-</li>
-                  </ul>
-                  <div className="has-lines black">Subscribe!</div>
-                </div>
-                <div className="plan">
-                  <h2 className="rela-block half-big-text">Full</h2>
-                  <div className="orbitron black-orb">\\\///</div>
-                  <p className="rela-block"><span style={{fontFamily: '"Montserrat"', fontSize: '30px', lineHeight: '40px'}}>150$</span>/year</p>
-                  <div className="orbitron black-orb">\\\///</div>
-                  <ul className="rela-block">
-                    <li>Customer Support 24/7</li>
-                    <li>Lifetime Updates</li>
-                    <li>10 TB Cloud Storage</li>
-                    <li>100 Email boxes</li>
-                    <li>Unlimited Traffic</li>
-                  </ul>
-                  <div className="has-lines black">Subscribe!</div>
-                </div>
-              </div>
-            </div>
+            
+           
             <div className="rela-block testimonials-section">
               <div className="floated left test-left">
                 <div className="abs-cent-text">
@@ -339,28 +192,14 @@ $(document).ready(function(){
             </div>
             <div className="rela-block contact-section" id="contactSection">
               <h2 className="half-big-text has-border">Contact</h2>
-              <p>Crucifix normcore synth, retro aesthetic plaid hashtag keffiyeh actually beard. Kombucha chillwave hoodie fap. Pug 3 wolf moon chia, keytar franzen cray cred slow-carb waistcoat viral farm-to-table sartorial lomo.</p>
-              <div className="orbitron black-orb">\\\///</div>
+              <h2 className="small-header">Don't hesitate to contact us.</h2>
               <div className="rela-block contact-form-container">
                 <div className="contact-half contact-left">
-                  <h2 className="small-header">Don't hesitate to contact us.</h2>
-                  <p>Man braid leggings schlitz semiotics chambray 3 wolf moon blog fashion axe. Shabby chic paleo typewriter asymmetrical, forage chia affogato etsy. Cronut retro meh distillery.</p>
+                  <p></p>
                   <div className="rela-block left-quad-container">
-                    <div className="contact-quad">4435 Berkshire Circle<br />Knoxville<br />TN 27912</div>
-                    <div className="contact-quad">879-890-9767<br />234-890-1213</div>
-                    <div className="contact-quad">mail@mail.com<br />themes.fastwp.net</div>
-                    <div className="contact-quad">M-F: 8 AM - 3 PM<br />Sa: 8AM - 12PM<br />Su: Closed</div>
+                    <div className="contact-quad">5555 W Loop S #150<br />Bellaire<br />TX 77401</div>
+                    <div className="contact-quad">asma.mirza@revealthe vue.com</div>
                   </div>
-                  <div className="social-button facebook-button" />
-                  <div className="social-button twitter-button" />
-                  <div className="social-button instagram-button" />
-                </div>
-                <div className="contact-half contact-right">
-                  <input type="text" placeholder="ENTER YOU NAME" className="contact-input" />
-                  <input type="text" placeholder="ENTER YOUR EMAIL" className="contact-input" />
-                  <input type="text" placeholder="PHONE NUMBER" className="contact-input" />
-                  <textarea cols={40} rows={5} placeholder="ENTER YOUR MESSAGE" className="contact-input big-input" defaultValue={""} />
-                  <h2 className="small-header submit-button">Submit</h2>
                 </div>
               </div>
             </div>
@@ -370,9 +209,8 @@ $(document).ready(function(){
                 <div className="social-button facebook-button" />
                 <div className="social-button twitter-button" />
                 <div className="social-button instagram-button" />
-                <div className="social-button behance-button" />
               </div>
-              <p>Classic deluxe custom designer luxury prestige high-quality premium select gourmet pocket pencil sharpener.<br />Yours for the asking, no purchase necessary. It's our way of saying thank you.</p>
+              <p></p>
             </div>
           </div>
 
