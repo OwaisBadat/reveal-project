@@ -69,6 +69,14 @@ $(document).ready(function(){
       const whiteStyle ={
         color: "white"
       }
+      const linestyle={
+        color: "white",
+        fontSize: "30px",
+        margin: "0"
+      }
+      const row={
+        display: "-webkit-inline-box"
+      }
         return (
             <div>
             <div className="nav-bar">
@@ -86,8 +94,11 @@ $(document).ready(function(){
                 <h1 className="big-text">Reveal</h1>
                 <div className="orbitron top-orb">\\\///</div>
                 <p className="top-small-text" style={whiteStyle}>Next-Generation Optics for Electronic Vision Aids</p>
+                <div style={row}>
                 <a className="nav-link" style={whiteStyle} href="">Medical Treatment</a>
+                <p style={linestyle}>|</p>
                 <a className="nav-link" style={whiteStyle} href="#aboutSection">Surgery</a>
+                </div>
               </div>
             </div>
             {/* <div className="rela-block under-top-section">
