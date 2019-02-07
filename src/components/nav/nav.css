@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css?family=Orbitron:700");
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500");
 
-
 #explore {
     padding-top:0px;
     padding-bottom:60px;
@@ -10,6 +9,11 @@
 #explore2 {
     padding-top:0px;
     padding-bottom:50px;
+}
+#explore3 {
+  padding-top:10px;
+  padding-bottom:10px;
+  color: #000;
 }
 a {
   text-decoration: none;
@@ -59,7 +63,7 @@ body {
   font-size: 20px;
   letter-spacing: 0px;
   line-height: 32px;
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 }
 .orbitron::before,
 .orbitron::after {
@@ -128,9 +132,18 @@ body {
 .nav-link:hover {
   color: #fff;
 }
+.top-link{
+  color: white;
+  font-size: 13px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 0 12px;
+  transition: 0.4s ease;
+}
 .top-section {
   height: 100vh;
-  background: url("https://upload.wikimedia.org/wikipedia/commons/archive/e/e1/20141028134401%21Icefields%282013.07.16%29byRyanSchroeder.jpg") no-repeat center;
+  background: url("galaxy.jpg") no-repeat center;
   background-size: cover;
 }
 .grad-back::before {
@@ -156,8 +169,8 @@ body {
 .big-text {
   font-family: "Montserrat";
   text-transform: uppercase;
-  font-size: 58px;
-  line-height: 72px;
+  font-size: 45px;
+  line-height: 40px;
   letter-spacing: 20px;
   margin-bottom: 60px;
 }
@@ -293,7 +306,7 @@ body {
   bottom: 10px;
 }
 .about-us-section {
-  padding: 50px 0 80px;
+  padding: 30px 0 0px;
 }
 .about-us-section> p {
   display: block;
@@ -302,13 +315,13 @@ body {
   margin: 30px auto 120px;
 }
 .about-us-section .orbitron {
-  margin-bottom: 100px;
+  margin-bottom: 10px;
 }
 .about-us-quad-container,
 .about-us-bottom-container {
   width: 85%;
   max-width: 1100px;
-  margin: 0 auto 100px;
+  margin: 0 auto 25px;
 }
 .quad-half {
   width: 50%;
@@ -388,7 +401,7 @@ body {
 }
 .portfolio-collage {
   height: 1000px;
-  max-width: 1800px;
+  max-width: 1500px;
   margin: auto;
 }
 .collage-column {
@@ -424,19 +437,19 @@ body {
   width: 25%;
 }
 .quarter-div .big-text {
-  letter-spacing: 4px;
+  letter-spacing: 2px;
   margin-bottom: 15px;
 }
 .team-section {
-  padding: 150px 0 0px;
+  padding: 40px 0 0px;
 }
 .team-section p {
   position: relative;
   width: 60%;
-  margin: 0 auto 140px;
+  margin: 0 auto 60px;
 }
 .team-section .orbitron {
-  margin-bottom: 100px;
+  margin-bottom: 0px;
 }
 .profile-view-container {
   width: 90%;
@@ -475,7 +488,7 @@ body {
   display: inline-block;
   position: relative;
   padding-top: 50px;
-  width: 48%;
+  width: 80%;
   vertical-align: top;
   text-align: left;
 }
@@ -610,7 +623,7 @@ body {
 .testimonials-section {
   background-color: #000;
   color: #fff;
-  height: 500px;
+  height: 700px;
 }
 .test-left {
   height: 100%;
@@ -624,7 +637,6 @@ body {
   width: 58%;
 }
 .test-right .space {
-  margin-bottom: 60px;
   font-size: 16px;
   letter-spacing: 4px;
   line-height: 20px;
@@ -635,7 +647,7 @@ body {
   margin-bottom: 6px;
 }
 .contact-section {
-  padding: 220px 0 120px;
+  padding: 120px 0 80px;
 }
 .contact-section> p {
   width: 90%;
@@ -705,7 +717,7 @@ body {
   outline: none;
 }
 .footer-section {
-  padding: 75px 0;
+  padding: 25px 0;
   background: #000;
   color: #fff;
 }

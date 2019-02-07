@@ -3,9 +3,14 @@ import navcss from './nav.css'
 import Reveal from './reveal.jpg'
 import $ from 'jquery'
 import smartglass from "./smartglasses.png"
+import vue1 from "./vue1.png"
+import vue2 from "./vue2.png"
+import fovean from "./fovean.png"
+import LazyLoad from "../slider/slider.js";
 
 
 class Nav extends React.Component {
+
 
     componentDidMount() {
 
@@ -58,124 +63,126 @@ $(document).ready(function(){
       }
     
     render() {
+      const blackStyle ={
+        color: "black"
+      }
+      const whiteStyle ={
+        color: "white"
+      }
         return (
             <div>
             <div className="nav-bar">
               <div className="nav-logo">Reveal the Vue</div>
               <div className="nav-links-container">
                 <a className="nav-link active" href="#topSection" id="topLink">Home</a>
-                <a className="nav-link" href="#aboutSection" id="aboutLink">Srugical Glasses</a>
-                <a className="nav-link" href="#portfolioSection" id="portfolioLink">VR Headset</a>
-                <a className="nav-link" href="#teamSection" id="teamLink">Team</a>
+                <a className="nav-link" href="#aboutSection" id="aboutLink">Vue</a>
+                <a className="nav-link" href="#portfolioSection" id="portfolioLink">Fovean</a>
+                <a className="nav-link" href="#teamSection" id="teamLink">Testimonials</a>
                 <a className="nav-link" href="#contactSection" id="contactLink">Contact</a>
               </div>
             </div>
             <div className="rela-block top-section grad-back" id="topSection">
               <div className="abs-cent-text top-text">
-                <h1 className="big-text">Reveal The Vue</h1>
+                <h1 className="big-text">Reveal</h1>
                 <div className="orbitron top-orb">\\\///</div>
-                <p className="top-small-text">Here is a some filler text that I am using to make this look like a site.<br />Not much else going on here so you can move along.</p>
+                <p className="top-small-text" style={whiteStyle}>Next-Generation Optics for Electronic Vision Aids</p>
+                <a className="nav-link" style={whiteStyle} href="">Medical Treatment</a>
+                <a className="nav-link" style={whiteStyle} href="#aboutSection">Surgery</a>
               </div>
             </div>
-            <div className="rela-block under-top-section">
+            {/* <div className="rela-block under-top-section">
               <div className="half-big-text under-top-big-text">Reveal the Vue</div>
               <div className="lines-thing" />
               <p className="under-top-small-text">The patent-pending VUE is a high-tech, 3D vision aid for people suffering from debilitating vision loss caused by retinal diseases such as age-related macular degeneration (AMD), diabetic retinopathy, and retinitis pigmentosa, as well as other vision disorders such as hemianopia, and glaucoma.  These diseases affect over 17 million people in the United States, and over ten times that amount worldwide. The VUE has the capability to give these people back some of their independence and improve their quality of life.  In addition, we are pursuing Medicare coverage to minimize the out-of-pocket costs for patients to purchase the VUE, but we have not been approved for this yet. </p>
-            </div>
+            </div> */}
             <div className="rela-block about-us-section" id="aboutSection">
                 <div className="product-one">
-              <h1 className="half-big-text has-border">Surgical Glasses</h1>
+              <h1 className="half-big-text has-border">Vue</h1>
               <p></p>
-              <div id="explore">
-              <div className="has-lines black">Explore</div>
-              </div>
               <div>
-                <img src={smartglass} />
+                <img src={vue1} />
+                <img src={vue2} />
               </div>
               </div>
               <div className="rela-block about-us-quad-container">
                 <div className="rela-block quad-row">
                   <div className="quad-half floated left">
-                    <h2 className="small-header">Clean Code</h2>
-                    <p>Ennui literally hella skateboard normcore leggings franzen bespoke etsy listicle single-origin coffee.</p>
+                    <h2 className="small-header">THE WHAT</h2>
+                    <p>The VUE is a revolutionary electronic vision-aid device that optically helps those with retinal diseases such as macular degeneration regain proper vision again. </p>
                   </div>
                   <div className="quad-half floated left">
-                    <h2 className="small-header">Retina Ready</h2>
-                    <p>Kale chips typewriter echo park, meggings sartorial selfies butcher hammock irony.</p>
+                    <h2 className="small-header">THE WHY</h2>
+                    <p>186 million individuals suffer from retinal diseases (macular degeneration, retinitis pigmentosa, diabetic retinopathy, etc) with no current solution that aids to depth perception, clarity, and lifestyle adaptation.</p>
                   </div>
                 </div>
                 <div className="rela-block quad-row">
+                  <div className="">
+                    <h2 className="small-header">THE HOW</h2>
+                    <p>The VUE allows individuals with retinal diseases to regain their independence by customizable, voice-activated pre-sets for regular activities such as walking, reading, watching television. Users are able to see again with pristine edge detection and resolution with automated detection of near or distance vision. </p>
+                  </div>
+                </div>
+                <div id="explore3">
+                  <a className="has-lines black" style={blackStyle} href="#ourTecnology">Learn More</a>
+                </div>
+              </div>
+              <div className="orbitron top-orb">\\\///</div>   
+            </div>
+            <div className="rela-block about-us-section" id="portfolioSection">
+            <div className="product-one">
+              <h1 className="half-big-text has-border">Fovean</h1>
+              <p></p>
+              <div>
+                <img src={fovean} />
+              </div>
+              </div>
+              <div className="rela-block about-us-quad-container">
+                <div className="rela-block quad-row">
                   <div className="quad-half floated left">
-                    <h2 className="small-header">Flexible</h2>
-                    <p>Hoodie kickstarter cray man braid, lo-fi waistcoat retro master cleanse hella.</p>
+                    <h2 className="small-header">THE WHAT</h2>
+                    <p>The Fovean is a surgical electronic vision aid that dynamically switches between total immersion, heads-up display, and augmented reality with simple voice commands. The Foveon’s visual display is unmatched with respect to field-of-view, resolution, and vergence control, presenting the wearer with images equal to real vision, as well as the ability to overlay PET scans, CT scans, X-rays, etc in real time using AR.</p>
                   </div>
                   <div className="quad-half floated left">
-                    <h2 className="small-header">Trending Design</h2>
-                    <p>Brooklyn schlitz tacos readymade, portland wolf man braid direct trade fingerstache next level lo-fi pickled.</p>
+                    <h2 className="small-header">THE WHY</h2>
+                    <p>Current surgical goggles, loupes, and technology are not ergonomically-suited for long surgical procedures, and cannot be worn for long periods of time without the surgeon experience nausea, dizziness, or dry eyes. Furthermore, there is a delay in image processing between the goggle images and real-time. Current surgical methods do not provide high resolution imaging in real-time nor voice commands to change settings in sterile fields.</p>
                   </div>
+                </div>
+                <div className="rela-block quad-row">
+                  <div className="">
+                    <h2 className="small-header">THE HOW</h2>
+                    <p>The patented Fovean technology allows surgeons to see using the highest resolution available in current medical technology, to zoom-in and out using voice commands, and overlay 3D images of scans in real-time over the patient (again, using voice activation). The system has zero delays or latency due to the use of a patented polygon mirror providing high-speed eye-tracking.</p>
+                  </div>
+                </div>
+                <div id="explore3">
+                  <a className="has-lines black" style={blackStyle} href="#ourTecnology">Learn More</a>
                 </div>
               </div>   
             </div>
-            <div className="rela-block portfolio-section" id="portfolioSection">
-              <div className="rela-block portfolio-top grad-back">
-                <h1 className="half-big-text has-border">VR Headset</h1>
-                <div id="explore2">
-              <div className="has-lines black">Explore</div>
-              </div>
-              </div>
-              <div className="rela-block portfolio-collage">
-                <div className="floated left collage-column">
-                  <div className="floated left collage-image third one" />
-                  <div className="floated left collage-image third two" />
-
-                </div>
-                <div className="floated left collage-column">
-                  <div className="floated left collage-image two-thirds six" />
-                </div>
-              </div>
-              <div className="rela-block portfolio-bottom">
-                <div className="floated left quarter-div">
-                  <div className="abs-cent-text">
-                    <h1 className="big-text">Vision Correction</h1>
-                    <p>one patient with 20/200 vision in one eye and worse than 20/400 with the other was able to read 20/80 using the VUE. (NOTE: 20/20 is considered normal vision, and that 20/200 is considered legally blind.)</p>
-                  </div>
-                </div>
-                <div className="floated left quarter-div">
-                  <div className="abs-cent-text">
-                    <h1 className="big-text">Main Point 2</h1>
-                    <p>Main Point text</p>
-                  </div>
-                </div>
-                <div className="floated left quarter-div">
-                  <div className="abs-cent-text">
-                    <h1 className="big-text">Main Point 3</h1>
-                    <p>Main Point text</p>
-                  </div>
-                </div>
-                <div className="floated left quarter-div">
-                  <div className="abs-cent-text">
-                    <h1 className="big-text">Main Point 4</h1>
-                    <p>Main Point text</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="rela-block team-section" id="teamSection">
-              <h1 className="half-big-text has-border">Team</h1>
+            <div className="rela-block team-section" id="ourTecnology">
+              <h1 className="half-big-text has-border">Our Technology</h1>
               <p>Reveal was founded by Jerry Aguren and John Marino, with the guidance of Dr. Warren Cross  who was the catalyst inspiring Jerry to come up with the idea of the VUE.</p>
               <div className="orbitron black-orb">\\\///</div>
               <div className="rela-block profile-view-container">
                 <div className="profile-content">
-                  <h2 className="half-big-text">Jerry Aguren</h2>
-                  <h3 className="small-header">CEO</h3>
-                  <p> Jerry has more than thirty-years experience leading and developing new technologies across a broad range of industries. Prior to starting Reveal, Jerry served as Chief Technology Officer for Hewlett-Packard’s Storage Network Division and Chief Technologist of Optics for Hewlett-Packard’s Enterprise business divisions. Prior to Hewlett-Packard, Jerry was also one of the Founders of ATL, a tape library manufacturer that went IPO and was eventually sold for $300M..</p>
-                  <div className="lines-thing black" />
+                  <h2 className="half-big-text">The Vue</h2>
+                  {/* <h3 className="small-header">CEO</h3> */}
+                  <p> </p>
+                  {/* <div className="lines-thing black" /> */}
+                </div>
+              </div>
+              <div className="rela-block profile-view-container">
+                <div className="profile-content">
+                  <h2 className="half-big-text">The Fovean</h2>
+                  {/* <h3 className="small-header">CEO</h3> */}
+                  <p>The proprietary Fovean is the most advanced vision system in the world. Its patented technology allows it to automatically align to each surgeons unique optical and physical requirements. DRI will design, develop, and produce the Foveon base technology system and the Application Specific Modules (ASMs) which add additional resources required to support different applications. 
+                  <br/><br/>The Fovean system consists of three components: a Foveon display system, a pair of custom Foveon stereo cameras, and a Fovean display controller. These three components define the Foveon’s base technology . The Fovean display is approximately the size of ski goggles. Special micro projectors are positioned above each eye (see figure1) . Moving the projection system from the front of the eye to above the eye allows the Foveon to quickly switch ( using verbal commands) from total immersion, see - through, or augmented reality modes. 
+                  <br/><br/>The Fovean display system has incorporated high speed eye tracking, where both eye positions are sent to the Fovean cameras. The Fovean cameras have been designed to track saccadic motion of the human eye with zero latency. The cameras are small enough to mount two in the display goggle.</p>
+                  {/* <div className="lines-thing black" /> */}
                 </div>
               </div>
             </div>
             
-           
-            <div className="rela-block testimonials-section">
+
+            <div className="rela-block testimonials-section" id="teamSection">
               <div className="floated left test-left">
                 <div className="abs-cent-text">
                   <h2 className="half-big-text has-border">Testimonials</h2>
@@ -183,10 +190,7 @@ $(document).ready(function(){
               </div>
               <div className="floated left test-right">
                 <div className="abs-cent-text">
-                  <p className="space">"Meggings cold-pressed bitters authentic, locavore butcher etsy gastropub semiotics. Banjo mixtape farm-to-table, whatever poutine master cleanse blog godard raw denim williamsburg vice pinterest forage fap. Master cleanse single-origin coffee
-                    farm-to-table, flannel VHS viral XOXO bespoke banh mi tumblr umami. Banh mi brunch DIY, umami wayfarers waistcoat chia small batch brooklyn meggings food truck iPhone next level photo booth before they sold out."</p>
-                  <h2 className="small-header">Benedict Cumberbatch</h2>
-                  <p><em>Occupation stuff here</em></p>
+                <LazyLoad />
                 </div>
               </div>
             </div>
