@@ -161,18 +161,22 @@ body {
   line-height: 28px;
 }
 .top-small-text {
-  font-size: 17px;
+  font-size: 28px;
   line-height: 24px;
   letter-spacing: 2px;
   font-weight: 400;
+  margin-top: 10px;
+}
+.bottom-small-text{
+  font-size: 18px;
 }
 .big-text {
   font-family: "Montserrat";
   text-transform: uppercase;
-  font-size: 45px;
+  font-size: 65px;
   line-height: 40px;
   letter-spacing: 20px;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 }
 .half-big-text {
   font-family: "Montserrat";
@@ -275,6 +279,7 @@ body {
   font-weight: 700;
   letter-spacing: 4px;
   margin: 10px;
+  color: white;
 }
 .has-lines::before,
 .has-lines::after {
@@ -297,7 +302,7 @@ body {
 }
 .has-lines.black:hover::before,
 .has-lines.black:hover::after {
-  background-color: #000;
+  background-color: white;
 }
 .has-lines:hover::before {
   top: 8px;
@@ -307,21 +312,25 @@ body {
 }
 .about-us-section {
   padding: 30px 0 0px;
+  background-color: black;
 }
 .about-us-section> p {
   display: block;
   position: relative;
   width: 65%;
   margin: 30px auto 120px;
+  color: white;
 }
 .about-us-section .orbitron {
   margin-bottom: 10px;
+  color: white;
 }
 .about-us-quad-container,
 .about-us-bottom-container {
   width: 85%;
   max-width: 1100px;
   margin: 0 auto 25px;
+  color: white;
 }
 .quad-half {
   width: 50%;
@@ -394,6 +403,7 @@ body {
 }
 .portfolio-top .half-big-text {
   margin: 50px auto;
+  color: white;
 }
 .portfolio-second {
   padding: 50px 0;
@@ -418,15 +428,6 @@ body {
 .collage-image.two-thirds {
   height: 100%;
   width:100%;
-}
-.collage-image.one {
-  background: url('./vr1.png') no-repeat center;
-}
-.collage-image.two {
-  background: url('./vr2.png') no-repeat center;
-}
-.collage-image.six {
-  background: url('./vue-sketch.jpg') no-repeat center
 }
 .portfolio-bottom {
   height: 300px;
