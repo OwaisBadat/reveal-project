@@ -2,6 +2,8 @@ import React, {Component} from "react"
 import vuecss from './vue.css'
 import vue1 from "./vue1.png"
 import vue2 from "./vue2.png"
+import $ from 'jquery'
+import ScrollMagic from 'scrollmagic';
 
 
 
@@ -9,37 +11,73 @@ class Vue extends React.Component {
 
 
     componentDidMount() {
-
-      }
+      $(function () { // wait for document ready
+        // init
+        var controller = new ScrollMagic.Controller({
+          globalSceneOptions: {
+            triggerHook: 'onLeave'
+          }
+        });
     
+        // get all slides
+        var slides = document.querySelectorAll("div.about-us-section");
+    
+        // create scene for every slide
+        for (var i=0; i<slides.length; i++) {
+          new ScrollMagic.Scene({
+              triggerElement: slides[i]
+            })
+            .setPin(slides[i])
+            .addIndicators() // add indicators (requires plugin)
+            .addTo(controller);
+        }
+      });
+    }
+
+      
     render() {
         const blackStyle ={
             color: "black"
           }
         const whiteStyle ={
-            color: "white"
+            color: "white",
+          }
+        const spacingStyle ={
+            marginTop: "10px",
+            marginBottom: "10px",
+          }
+          const seeWorld ={
+            marginTop: "15px",
+            marginBottom: "20px",
+            fontSize: "40px",
+          }
+          const picSpace={
+            marginBottom: "30px"
           }
         return (
             <div>
-            {/* <div className="rela-block under-top-section">
-              <div className="half-big-text under-top-big-text">Reveal the Vue</div>
-              <div className="lines-thing" />
-              <p className="under-top-small-text">The patent-pending VUE is a high-tech, 3D vision aid for people suffering from debilitating vision loss caused by retinal diseases such as age-related macular degeneration (AMD), diabetic retinopathy, and retinitis pigmentosa, as well as other vision disorders such as hemianopia, and glaucoma.  These diseases affect over 17 million people in the United States, and over ten times that amount worldwide. The VUE has the capability to give these people back some of their independence and improve their quality of life.  In addition, we are pursuing Medicare coverage to minimize the out-of-pocket costs for patients to purchase the VUE, but we have not been approved for this yet. </p>
-            </div> */}
             <div className="rela-block about-us-section" id="aboutSection">
-                <div className="product-one">
-              <h1 className="half-big-text has-border"  style={whiteStyle}>Vue</h1>
+            <div id="vueAnimation">
+                <div className="product-one" style={whiteStyle}>
+                  <h1 className="half-big-text has-border">Vue</h1>
+                </div>
+                <div style={whiteStyle}>
+                  <h1 className="" style={seeWorld}>See the World. Again.</h1>
+                  <h3 className="" style={spacingStyle}>Move around while wearing the VUE.</h3>
+                  <h3 className="" style={spacingStyle}>Edge detection. Vergence control.</h3>
+                  <h3 className="" style={spacingStyle}>High resolution. Voice automation.</h3>
+                </div>
               <div id="explore3">
                   <a className="has-lines black" style={whiteStyle} href="#ourTech">Learn More</a>
                 </div>
-              <p></p>
-              <div>
+              <div style={picSpace}>
                 <img src={vue1} />
                 <img src={vue2} />
               </div>
               </div>
+              </div>
             </div>
-            </div>
+
         )
     }
 }
