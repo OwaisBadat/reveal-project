@@ -5,6 +5,8 @@ import ScrollMagic from 'scrollmagic';
 import * as Draggable from "gsap/umd/Draggable";
 import * as TweenMax from "gsap/umd/TweenMax";
 import { Power0 } from "gsap";
+import fovean2 from '../fovean/fovean2.png'
+import lens from "./lens.png"
 
 class OurTech extends React.Component {
 
@@ -17,25 +19,63 @@ class OurTech extends React.Component {
       const foveanMarginStyle ={
         marginBottom: '5%'
       }
+
+      const panel2 ={
+        marginLeft: "18%",
+        paddingTop: "25%",
+        fontSize: "18px",
+      }
+
+      const pStyle ={
+          paddingTop: "25%",
+          fontSize: "18px",
+      }
         return (
+          <div>
           <div className="rela-block team-section" id="ourTech">
           <h1 className="half-big-text has-border">Our Technology</h1>
           <div className="rela-block profile-view-container">
             <div className="profile-content">
               <h2 className="half-big-text">The Vue</h2>
-              <p>
+                <section className="panel">
+                <div>
+                <p style={pStyle}>
                 <b>THE WHAT:</b> The VUE is a revolutionary electronic vision-aid device that optically helps those
                   with retinal diseases such as macular degeneration regain proper vision again. 
-              <br/><br/>
-                  <b>THE WHY:</b> 186 million individuals suffer from retinal diseases (macular degeneration, retinitis
-                    pigmentosa, diabetic retinopathy, etc) with no current solution that aids to depth perception,
-                    clarity, and lifestyle adaptation.
-              <br/><br/>
-                  <b>THE HOW:</b> The VUE allows individuals with retinal diseases to regain their independence by
-                    customizable, voice-activated pre-sets for regular activities such as walking, reading, watching
-                    television. Users are able to see again with pristine edge detection and resolution with
-                    automated detection of near or distance vision.
                   </p>
+              <br/><br/>
+              </div>
+              <div>
+              <img src={lens} />
+              </div>
+              </section>
+              <section className="panel">
+              <div>
+              <img src={lens} />
+              </div>
+                <div>
+                <p style={panel2}>
+                <b>THE WHY:</b> 186 million individuals suffer from retinal diseases (macular degeneration, retinitis
+                  pigmentosa, diabetic retinopathy, etc) with no current solution that aids to depth perception,
+                  clarity, and lifestyle adaptation. 
+                  </p>
+              <br/><br/>
+              </div>
+              </section>
+              <section className="panel">
+                <div>
+                <p style={pStyle}>
+                <b>THE HOW:</b> The VUE allows individuals with retinal diseases to regain their independence by
+                  customizable, voice-activated pre-sets for regular activities such as walking, reading, watching
+                  television. Users are able to see again with pristine edge detection and resolution with
+                  automated detection of near or distance vision. 
+                  </p>
+              <br/><br/>
+              </div>
+              <div>
+              <img src={lens} />
+              </div>
+              </section>
             </div>
           </div>
           <div className="rela-block profile-view-container">
@@ -64,6 +104,7 @@ class OurTech extends React.Component {
               {/* <div className="lines-thing black" /> */}
             </div>
           </div>
+        </div>
         </div>
         )}
 }

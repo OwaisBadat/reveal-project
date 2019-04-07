@@ -1,11 +1,8 @@
 import React, {Component} from "react"
 import navcss from './nav.css'
-import Reveal from './reveal.jpg'
+
 import $ from 'jquery'
-import vue1 from "./vue1.png"
-import vue2 from "./vue2.png"
-import fovean from "./fovean.png"
-import LazyLoad from "../slider/slider.js";
+
 
 
 class Nav extends React.Component {
@@ -78,6 +75,9 @@ $(document).ready(function(){
       }
       const row={
         display: "-webkit-inline-box"
+      }
+      const bgStyle={
+        backgroundColor: "black",
       }
         return (
             <div>

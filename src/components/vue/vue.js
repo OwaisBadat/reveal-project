@@ -1,9 +1,15 @@
 import React, {Component} from "react"
 import vuecss from './vue.css'
-import vue1 from "./vue1.png"
-import vue2 from "./vue2.png"
+
 import $ from 'jquery'
 import ScrollMagic from 'scrollmagic';
+
+//images
+import above from './AboveTilted.jpg'
+import Front from './Front.jpg'
+import Rear from './Rear.jpg'
+import Side from './Side.jpg'
+import Top from './Top.jpg'
 
 
 
@@ -20,7 +26,7 @@ class Vue extends React.Component {
         });
     
         // get all slides
-        var slides = document.querySelectorAll("div.about-us-section");
+        var slides = document.querySelectorAll("section.panel");
     
         // create scene for every slide
         for (var i=0; i<slides.length; i++) {
@@ -52,12 +58,15 @@ class Vue extends React.Component {
             fontSize: "40px",
           }
           const picSpace={
-            marginBottom: "30px"
+            marginBottom: "0px"
           }
         return (
             <div>
             <div className="rela-block about-us-section" id="aboutSection">
             <div id="vueAnimation">
+            <div id="vueAnimationTop">
+            <img src={Front} />
+              <div id="text">
                 <div className="product-one" style={whiteStyle}>
                   <h1 className="half-big-text has-border">Vue</h1>
                 </div>
@@ -70,9 +79,19 @@ class Vue extends React.Component {
               <div id="explore3">
                   <a className="has-lines black" style={whiteStyle} href="#ourTech">Learn More</a>
                 </div>
-              <div style={picSpace}>
-                <img src={vue1} />
-                <img src={vue2} />
+                </div>
+                <img src={Rear} />
+                </div>
+                <div id="vueAnimationBottom" style={picSpace}>
+                <div>
+                  <img src={above} />
+                </div>
+                <div>
+                  <img src={Side} />
+                </div>
+                <div>
+                  <img src={Top} />
+                </div>
               </div>
               </div>
               </div>

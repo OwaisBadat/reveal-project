@@ -1,4 +1,4 @@
-import React, {Component} from "react"
+import React from "react"
 
 
 class PageBreak extends React.Component {
@@ -9,21 +9,6 @@ class PageBreak extends React.Component {
       }
     
     render() {
-        const blackStyle ={
-            color: "black"
-          }
-        const whiteStyle ={
-            color: "white",
-          }
-        const spacingStyle ={
-            marginTop: "10px",
-            marginBottom: "10px",
-          }
-          const seeWorld ={
-            marginTop: "15px",
-            marginBottom: "20px",
-            fontSize: "40px",
-          }
         const greyLine ={
           width: "100%",
           height: "10px",

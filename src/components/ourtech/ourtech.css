@@ -13,3 +13,18 @@
 .profile-content p b{
     color: red;
 }
+
+.panel{
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    background-color: #262626;
+    width: 100%;
+}
+
+img{
+    height: 375px;
+    width: 600px;
+}
+
+

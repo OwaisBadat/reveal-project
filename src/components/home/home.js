@@ -1,5 +1,4 @@
 import React, {Component} from "react"
-import homecss from './home.css'
 import navcss from '../nav/nav.css'
 
 
@@ -44,7 +43,7 @@ class Home extends React.Component {
               <div className="orbitron top-orb">\\\///</div>
               <p className="top-small-text" style={whiteStyle}>Next-Generation Optics for Electronic Vision Aids</p>
               <div style={row}>
-              <a className="nav-link bottom-small-text" style={whiteStyle} href="#aboutSection">Medical Treatment</a>
+              <a className="nav-link bottom-small-text" style={whiteStyle} href="#aboutSection" id="aboutLink">Medical Treatment</a>
               <p style={linestyle}>|</p>
               <a className="nav-link bottom-small-text" style={whiteStyle} href="#portfolioSection">Surgery</a>
               </div>
