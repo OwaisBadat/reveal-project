@@ -9,22 +9,22 @@
     background-color: #1D1E1F;
 }
 #text { transition: all .2s ease-in-out; color: transparent;
-	text-shadow: 0 0 8px #000; }
+	text-shadow: 0 0 8px #000;}
 #text:hover { transform: scale(1.1); transition-duration: 2s; }
 
 #vueAnimationTop{
     display: flex;
-    width: -webkit-fill-available;
+    flex-direction: row;
     margin-top: -2%;
 }
 
 #vueAnimationTop img:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition-duration: 3s;
 }
 
 #vueAnimationBottom img:hover{
-    transform: scale(1.2);
+    transform: scale(1.1);
     transition-duration: 3s;
 }
 
@@ -36,5 +36,17 @@
 
 #vueAnimationBottom{
     display: flex;
+    width: -webkit-fill-available;
 }
+
+#vueAnimationTop img {
+    width: 33%;
+    height: 50%;
+}
+
+#vueAnimationBottom img {
+    width: 33%;
+    height: 50%;
+}
+
 

@@ -7,6 +7,10 @@ import * as TweenMax from "gsap/umd/TweenMax";
 import { Power0 } from "gsap";
 import fovean2 from '../fovean/fovean2.png'
 import lens from "./lens.png"
+import Slide from 'react-reveal/Slide';
+import VR from './vr-glasses.png'
+import img2 from './img2.jpeg'
+
 
 class OurTech extends React.Component {
 
@@ -19,15 +23,28 @@ class OurTech extends React.Component {
       const foveanMarginStyle ={
         marginBottom: '5%'
       }
+      const imgWidth ={
+        height: '60%',
+        width: '100%'
+      }
+      const imgWidth3 ={
+        height: '60%',
+        width: '100%'
+      }
+      const imgWidth2 ={
+        height: '80%',
+        width: '100%',
+        filter: 'blur(10px)'
+      }
 
       const panel2 ={
         marginLeft: "18%",
-        paddingTop: "25%",
+        paddingTop: "15%",
         fontSize: "18px",
       }
 
       const pStyle ={
-          paddingTop: "25%",
+          paddingTop: "15%",
           fontSize: "18px",
       }
         return (
@@ -37,6 +54,7 @@ class OurTech extends React.Component {
           <div className="rela-block profile-view-container">
             <div className="profile-content">
               <h2 className="half-big-text">The Vue</h2>
+              <Slide left>
                 <section className="panel">
                 <div>
                 <p style={pStyle}>
@@ -46,12 +64,14 @@ class OurTech extends React.Component {
               <br/><br/>
               </div>
               <div>
-              <img src={lens} />
+              <img src={VR} style={imgWidth}/>
               </div>
               </section>
+              </Slide>
+              <Slide right>
               <section className="panel">
-              <div>
-              <img src={lens} />
+              <div className="imgWidth2">
+              <img src={img2}/>
               </div>
                 <div>
                 <p style={panel2}>
@@ -62,8 +82,10 @@ class OurTech extends React.Component {
               <br/><br/>
               </div>
               </section>
+              </Slide>
+              <Slide left>
               <section className="panel">
-                <div>
+                <div classnName="panel3div">
                 <p style={pStyle}>
                 <b>THE HOW:</b> The VUE allows individuals with retinal diseases to regain their independence by
                   customizable, voice-activated pre-sets for regular activities such as walking, reading, watching
@@ -73,9 +95,10 @@ class OurTech extends React.Component {
               <br/><br/>
               </div>
               <div>
-              <img src={lens} />
+              <img src={VR} style={imgWidth3}/>
               </div>
               </section>
+              </Slide>
             </div>
           </div>
           <div className="rela-block profile-view-container">

@@ -24,7 +24,6 @@ class App extends Component {
         <OurTech />
         <Testimonials />
         <Nav />
-        <Contact />
       </div>
     );
   }

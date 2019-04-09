@@ -17,27 +17,27 @@ class Vue extends React.Component {
 
 
     componentDidMount() {
-      $(function () { // wait for document ready
-        // init
-        var controller = new ScrollMagic.Controller({
-          globalSceneOptions: {
-            triggerHook: 'onLeave'
-          }
-        });
+      // $(function () { // wait for document ready
+      //   // init
+      //   var controller = new ScrollMagic.Controller({
+      //     globalSceneOptions: {
+      //       triggerHook: 'onLeave'
+      //     }
+      //   });
     
-        // get all slides
-        var slides = document.querySelectorAll("section.panel");
+      //   // get all slides
+      //   var slides = document.querySelectorAll("section.panel");
     
-        // create scene for every slide
-        for (var i=0; i<slides.length; i++) {
-          new ScrollMagic.Scene({
-              triggerElement: slides[i]
-            })
-            .setPin(slides[i])
-            .addIndicators() // add indicators (requires plugin)
-            .addTo(controller);
-        }
-      });
+      //   // create scene for every slide
+      //   for (var i=0; i<slides.length; i++) {
+      //     new ScrollMagic.Scene({
+      //         triggerElement: slides[i]
+      //       })
+      //       .setPin(slides[i])
+      //       .addIndicators() // add indicators (requires plugin)
+      //       .addTo(controller);
+      //   }
+      // });
     }
 
       
@@ -60,12 +60,15 @@ class Vue extends React.Component {
           const picSpace={
             marginBottom: "0px"
           }
+          const picSpacetop={
+            marginTop: "2%"
+          }
         return (
             <div>
             <div className="rela-block about-us-section" id="aboutSection">
             <div id="vueAnimation">
-            <div id="vueAnimationTop">
-            <img src={Front} />
+            <div id="vueAnimationTop" style={picSpace}>
+            <img src={Front} style={picSpacetop}/>
               <div id="text">
                 <div className="product-one" style={whiteStyle}>
                   <h1 className="half-big-text has-border">Vue</h1>
@@ -80,18 +83,12 @@ class Vue extends React.Component {
                   <a className="has-lines black" style={whiteStyle} href="#ourTech">Learn More</a>
                 </div>
                 </div>
-                <img src={Rear} />
+                <img src={Rear} style={picSpacetop}/>
                 </div>
                 <div id="vueAnimationBottom" style={picSpace}>
-                <div>
                   <img src={above} />
-                </div>
-                <div>
                   <img src={Side} />
-                </div>
-                <div>
                   <img src={Top} />
-                </div>
               </div>
               </div>
               </div>

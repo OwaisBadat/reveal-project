@@ -15,16 +15,22 @@
 }
 
 .panel{
-    height: 500px;
+    height: 400px;
     display: flex;
     flex-direction: row;
     background-color: #262626;
     width: 100%;
 }
 
-img{
-    height: 375px;
-    width: 600px;
+.panel3div {
+width: 50%
 }
 
+.imgWidth2 img{
+    height: 80%;
+    width: 100%;
+    filter: blur(5px)
+}
+
+.imgWidth2 img:hover { filter: blur(0px); transition-duration: 3s }
 
